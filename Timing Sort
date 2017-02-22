@@ -1,0 +1,298 @@
+import time
+import random
+
+###################################### selection values #############################
+def selection_sort(arr):
+   for k in range(0,len(arr)-1):
+       pos=k
+       for m in range(k+1,len(arr)):
+           if arr[m]<arr[pos]:
+               pos = m
+       temp = arr[k]
+       arr[k] = arr[pos]
+       arr[pos] = temp
+   #print (a)
+
+
+########################################## insertion values ##########################
+def insertion_sort(arr):
+  for k in range(1, len(arr)):
+    cur = arr[k]
+    j = k
+    #print (j)
+    while j > 0 and arr[j-1] > cur:
+      arr[j] = arr[j-1]
+      j = j - 1
+    arr[j] = cur
+  #print (a)
+
+if __name__ == "__main__":
+######################################### Random #######################################
+    #10,000
+    a = []
+    for i in range (10000):
+        a.append(random.randint(-10, 20))
+
+    #7500
+    b = []
+    for i in range (7500):
+        b.append(random.randint(-10, 20))
+
+    #5,000
+    c = []
+    for i in range (5000):
+        c.append(random.randint(-10, 20))
+
+    #2,500
+    d = []
+    for i in range (2500):
+        d.append(random.randint(-10, 20))
+
+    #1,000
+    e = []
+    for i in range (1000):
+        e.append(random.randint(-10, 20))
+
+
+    ################################################ incrasing numbers ###############################
+    #10,000
+    f = []
+    for i in range (10000):
+        i += 1
+        f.append(i)
+
+    #7500
+    g = []
+    for i in range (7500):
+        i += 1
+        g.append(i)
+
+    #5,000
+    h = []
+    for i in range (5000):
+        i += 1
+        h.append(i)
+
+    #2,500
+    l = []
+    for i in range (2500):
+        i += 1
+        l.append(i)
+
+    #1,000
+    j = []
+    for i in range (1000):
+        i += 1
+        j.append(i)
+
+    ############################################## decreasing numbers ########################################
+    #10,000
+    k = []
+    for i in range (10000):
+        i -= 1
+        k.append(i)
+
+    #7500
+    m = []
+    for i in range (7500):
+        i -= 1
+        m.append(i)
+
+    #5,000
+    n = []
+    for i in range (5000):
+        i -= 1
+        n.append(i)
+
+    #2,500
+    o = []
+    for i in range (2500):
+        i -= 1
+        o.append(i)
+
+    #1,000
+    p = []
+    for i in range (1000):
+        i -= 1
+        p.append(i)
+
+
+
+
+    ############################################## times for random selection #########################
+    #random selection
+    print ("Random Selection")
+    #10000
+    start = time.clock()
+    selection_sort(a)
+    end = time.clock()
+    print ('Ten Thousand Increasing Selection: ' + '{:.20f}'.format(end - start))
+    #7500
+    start = time.clock()
+    selection_sort(b)
+    end = time.clock()
+    print ('Seven Thousand Five Hundred Increasing Selection: ' + '{:.20f}'.format(end - start))
+    #5000
+    start = time.clock()
+    selection_sort(c)
+    end = time.clock()
+    print ('Five Thousand Increasing Selection: ' + '{:.20f}'.format(end - start))
+    #2500
+    start = time.clock()
+    selection_sort(d)
+    end = time.clock()
+    print ('Two Thousand Five Hundred Increasing Selection: ' + '{:.20f}'.format(end - start))
+    #1000
+    start = time.clock()
+    selection_sort(e)
+    end = time.clock()
+    print ('One Thousand Increasing Selection: ' + '{:.20f}'.format(end - start))
+    print (" ")
+
+    ######################################### times for random insertion #######################
+    #random Insertion
+    print ("Random Insertion")
+    #10000
+    start = time.clock()
+    insertion_sort(a)
+    end = time.clock()
+    print ('Ten Thousand Increasing Insertion: ' + '{:.20f}'.format(end - start))
+    #7500
+    start = time.clock()
+    insertion_sort(b)
+    end = time.clock()
+    print ('Seven Thousand Five Hundred Increasing Insertion: ' + '{:.20f}'.format(end - start))
+    #5000
+    start = time.clock()
+    insertion_sort(c)
+    end = time.clock()
+    print ('Five Thousand Increasing Insertion: ' + '{:.20f}'.format(end - start))
+    #2500
+    start = time.clock()
+    insertion_sort(d)
+    end = time.clock()
+    print ('Two Thousand Five Hundred Increasing Insertion: ' + '{:.20f}'.format(end - start))
+    #1000
+    start = time.clock()
+    insertion_sort(e)
+    end = time.clock()
+    print ('One Thousand Increasing Insertion: ' + '{:.20f}'.format(end - start))
+    print (" ")
+
+    ############################################## times for increasing numbers #########################
+    #increasing numbers selection
+    print ("Increasing Selection")
+    #10000
+    start = time.clock()
+    selection_sort(f)
+    end = time.clock()
+    print ('Ten Thousand Increasing Selection: ' + '{:.20f}'.format(end - start))
+    #7500
+    start = time.clock()
+    selection_sort(g)
+    end = time.clock()
+    print ('Seven Thousand Five Hundred Increasing Selection: ' + '{:.20f}'.format(end - start))
+    #5000
+    start = time.clock()
+    selection_sort(h)
+    end = time.clock()
+    print ('Five Thousand Increasing Selection: ' + '{:.20f}'.format(end - start))
+    #2500
+    start = time.clock()
+    selection_sort(l)
+    end = time.clock()
+    print ('Two Thousand Five Hundred Increasing Selection: ' + '{:.20f}'.format(end - start))
+    #1000
+    start = time.clock()
+    selection_sort(j)
+    end = time.clock()
+    print ('One Thousand Increasing Selection: ' + '{:.20f}'.format(end - start))
+    print (" ")
+    ############################################## times for increasing numbers #########################
+    #increasing numbers Insertion
+    print ("Increasing Insertion")
+    #10000
+    start = time.clock()
+    insertion_sort(f)
+    end = time.clock()
+    print ('Ten Thousand Increasing Insertion: ' + '{:.20f}'.format(end - start))
+    #7500
+    start = time.clock()
+    insertion_sort(g)
+    end = time.clock()
+    print ('Seven Thousand Five Hundred Increasing Insertion: ' + '{:.20f}'.format(end - start))
+    #5000
+    start = time.clock()
+    insertion_sort(h)
+    end = time.clock()
+    print ('Five Thousand Increasing Insertion: ' + '{:.20f}'.format(end - start))
+    #2500
+    start = time.clock()
+    insertion_sort(l)
+    end = time.clock()
+    print ('Two Thousand Five Hundred Increasing Insertion: ' + '{:.20f}'.format(end - start))
+    #1000
+    start = time.clock()
+    insertion_sort(j)
+    end = time.clock()
+    print ('One Thousand Increasing Insertion: ' + '{:.20f}'.format(end - start))
+    print (" ")
+
+    ############################################## times for decreasing selection #########################
+    #decreasing selection
+    print ("Decreasing Selection")
+    #10000
+    start = time.clock()
+    selection_sort(k)
+    end = time.clock()
+    print ('Ten Thousand Decreasing Selection: ' + '{:.20f}'.format(end - start))
+    #7500
+    start = time.clock()
+    selection_sort(m)
+    end = time.clock()
+    print ('Seven Thousand Five Hundred Decreasing Selection: ' + '{:.20f}'.format(end - start))
+    #5000
+    start = time.clock()
+    selection_sort(n)
+    end = time.clock()
+    print ('Five Thousand Decreasing Selection: ' + '{:.20f}'.format(end - start))
+    #2500
+    start = time.clock()
+    selection_sort(o)
+    end = time.clock()
+    print ('Two Thousand Five Hundred Decreasing Selection: ' + '{:.20f}'.format(end - start))
+    #1000
+    start = time.clock()
+    selection_sort(p)
+    end = time.clock()
+    print ('One Thousand Decreasing Selection: ' + '{:.20f}'.format(end - start))
+    print (" ")
+    ############################################## times for decreasing insertion #########################
+    #decreasing Insertion
+    print ("Decreasing Insetion")
+    #10000
+    start = time.clock()
+    insertion_sort(k)
+    end = time.clock()
+    print ('Ten Thousand Decreasing Insertion: ' + '{:.20f}'.format(end - start))
+    #7500
+    start = time.clock()
+    insertion_sort(m)
+    end = time.clock()
+    print ('Seven Thousand Five Hundred Decreasing Insertion: ' + '{:.20f}'.format(end - start))
+    #5000
+    start = time.clock()
+    insertion_sort(n)
+    end = time.clock()
+    print ('Five Thousand Decreasing Insertion: ' + '{:.20f}'.format(end - start))
+    #2500
+    start = time.clock()
+    insertion_sort(o)
+    end = time.clock()
+    print ('Two Thousand Five Hundred Decreasing Insertion: ' + '{:.20f}'.format(end - start))
+    #1000
+    start = time.clock()
+    insertion_sort(p)
+    end = time.clock()
+    print ('One Thousand Decreasing Insertion: ' + '{:.20f}'.format(end - start))
+
