@@ -1,9 +1,4 @@
-#################################################################
-# Team Name: TheRevenant
-# Binary Search Tree Class
-# Project IV: Less Left, More Right
-# CSCI 241: Data Structures and Algorithms
-#################################################################
+
 class Binary_Search_Tree:
     """Base Class representing a Binary Search Tree Structure"""
 
